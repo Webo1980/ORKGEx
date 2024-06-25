@@ -1,0 +1,175 @@
+/* Style for the tab header */
+.tab-header {
+  background-color: #fff;
+  border: 1px solid #a19e9e;
+  padding: 10px;
+  color: #181818;
+  font-weight: bold;
+}
+
+.header-text {
+  color: white;
+  background-color: #e73e3e;
+  margin: 0px;
+  padding: 2px 66px 2px;
+  border-radius: 2px;
+}
+
+#table-head{
+  color: white;
+  background-color: #373434;
+  padding: 1px;
+}
+
+#report-container {
+  background-color: #fff;
+  border: 1px solid #a19e9e;
+  padding: 10px;
+  color: #181818;
+  font-weight: bold;
+}
+
+/* Style for the properties section */
+#properties-list, #property-input, #properties {
+  /* Add styles for the content inside the tab */
+  margin-top: 10px; /* Add spacing at the top of the content */
+}
+
+/* Add CSS styles for the popup and highlighted text here */
+.highlighted-text {
+  border: 1px solid black;
+  padding: 2px;
+  transition: background-color 0.3s;
+  color: red;
+}
+
+.highlighted-text:hover {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+.properties-list {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* Style for the report table */
+#report-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc; /* Add a thin border */
+}
+
+/* Style for table headers (top-left cells) */
+#report-table th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ccc; /* Add a border */
+}
+
+/* Style for table cells */
+#report-table td {
+  padding: 8px;
+  border: 1px solid #ccc; /* Add a border */
+}
+
+/* Style for alternating rows (optional) */
+#report-table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* Style for the separator */
+#seperator {
+  width: 90%; /* Set the width to 80% of the window width */
+  height: 1px; /* Adjust the height to make it look deeper */
+  background-color: #fff;
+  margin: 10px auto; /* Center the separator horizontally and add vertical spacing */
+  border: none; /* Remove any border (optional) */
+}
+
+/* Style for the scrollbar track */
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+  background-color: #ebe9e9; /* Dark gray background color */
+}
+
+/* Style for the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #736f6f; /* Slightly lighter gray for the thumb */
+}
+
+
+/* Style for the "Generate Report" button */
+#generate-report {
+  background-color: #333; 
+  color: #fff; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 6px 8px; 
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style for the "Generate Report" button when disabled */
+#generate-report:disabled {
+  background-color: #777; /* Dark gray background when disabled */
+  color: #ccc; /* Light gray text when disabled */
+  cursor: not-allowed; /* Show a "not allowed" cursor when disabled */
+  margin-top: 10px;
+}
+
+#create-paper {
+  background-color: #333; 
+  color: #fff;
+  border: none;
+  border-radius: 8px; 
+  padding: 6px 8px; 
+  cursor: pointer; 
+  margin-top: 10px;
+}
+
+#properties button {
+  background-color: #e73e3e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 4px;
+  cursor: default;
+  margin: 1px;
+}
+
+#property-input{
+  background-color: #e5e3e3;
+  color: #141313;
+  border-radius: 5px;
+  padding: 4px 4px;
+  cursor: default;
+  margin: 2px;
+}
+
+.delete-icon {
+  color: red; 
+  margin-right: 8px; /* Add right margin for spacing */
+}
+
+#suggestions-box {
+  display: none;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.suggestion {
+  color: #FF5733;
+}

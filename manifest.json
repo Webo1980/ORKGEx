@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "ORKG Annotator",
+  "version": "1.0",
+  "description": "Annotate research articles on the web",
+  "permissions": ["activeTab", "contextMenus", "storage", "tabs","webNavigation"],
+  "host_permissions": ["https://*.incubating.orkg.org/"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "48": "icons/icon.png"
+    }
+  }
+}

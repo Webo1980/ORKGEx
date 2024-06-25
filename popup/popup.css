@@ -1,0 +1,425 @@
+/* Style for the tab header */
+.tab-header {
+  background-color: #fff;
+  border: 1px solid #a19e9e;
+  padding: 10px;
+  color: #181818;
+  border-radius: 0 0 10px 10px;
+  font-weight: bold;
+}
+
+.header-text {
+  color: white;
+  background-color: #e73e3e;
+  margin: 0px;
+  padding: 0px 0;
+  border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center !important; /* Center items vertically */
+  justify-content: space-between !important; /* Space items horizontally */
+}
+
+.circle {
+  background-color: white;
+  color: #e73e3e;
+  border-radius: 50%;
+  border: 2px solid #4d4a4a; /* Add this line to set the border color to black */
+  padding: 1px;
+  font-weight: bolder;
+  margin: 2px;
+}
+
+.text {
+  flex: 1;
+  text-align: center;
+  padding: 0 10px; /* Add spacing from the sides */
+  font-size: 16px;
+}
+
+
+#table-head{
+  color: white;
+  background-color: #373434;
+  padding: 1px;
+}
+
+#report-container {
+  background-color: #fff;
+  border: 1px solid #a19e9e;
+  padding: 10px;
+  color: #181818;
+  font-weight: bold;
+}
+
+.container {
+  background-color: #fff;
+  border: 1px solid #a19e9e;
+  padding: 10px;
+  color: #181818;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Style for the properties section */
+#properties-list, #property-input, #properties {
+  /* Add styles for the content inside the tab */
+  margin-top: 10px; /* Add spacing at the top of the content */
+}
+
+/* Add CSS styles for the popup and highlighted text here */
+
+/* Style for highlighted text with delete icon */
+.highlighted-text {
+  position: relative;
+  border: 1px solid black;
+  padding: 2px;
+  transition: background-color 0.3s;
+  color: red;
+}
+
+.highlighted-text:hover {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+/* Style for the delete icon */
+.delete-highlight {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: red;
+  cursor: pointer;
+}
+
+.properties-list {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* Style for the report table */
+.report-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc; /* Add a thin border */
+}
+
+/* Style for table headers (top-left cells) */
+.report-table th {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ccc; /* Add a border */
+}
+
+/* Style for table cells */
+.report-table td {
+  padding: 8px;
+  border: 1px solid #ccc; /* Add a border */
+}
+
+/* Style for alternating rows (optional) */
+.report-table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* Style for the separator */
+#seperator {
+  width: 90%; /* Set the width to 80% of the window width */
+  height: 1px; /* Adjust the height to make it look deeper */
+  background-color: #fff;
+  margin: 4px auto; /* Center the separator horizontally and add vertical spacing */
+  border: none; /* Remove any border (optional) */
+}
+
+/* Style for the scrollbar track */
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+  background-color: #ebe9e9; /* Dark gray background color */
+}
+
+/* Style for the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #736f6f; /* Slightly lighter gray for the thumb */
+}
+
+
+/* Style for the "Generate Report" button when disabled */
+#generate-report:disabled {
+  background-color: #777; /* Dark gray background when disabled */
+  color: #ccc; /* Light gray text when disabled */
+  cursor: not-allowed; /* Show a "not allowed" cursor when disabled */
+  margin-top: 10px;
+}
+
+#properties button {
+  background-color: #e73e3e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 4px;
+  cursor: default;
+  margin: 1px;
+}
+
+.delete-icon {
+  color: red; 
+  margin-right: 8px; /* Add right margin for spacing */
+}
+
+#suggestions-box {
+  display: none;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.suggestion {
+  color: #FF5733;
+}
+
+/* Style for the tooltip with ORKG Predicate ID */
+button[property-name][id]:hover::before {
+  content: "Property: " attr(property-name) "\A ORKG Predicate ID: " attr(id);
+  white-space: pre; 
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  position:absolute;
+  z-index:0;
+  opacity: 1; /* Show the tooltip initially on hover */
+  transition: opacity 0.3s;
+}
+
+/* Style for the tooltip without ORKG Predicate ID */
+button[property-name]:not([id]):hover::before {
+  content: "Property: " attr(property-name);
+  white-space: pre; /* Enable multiline content */
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  z-index:0;
+  opacity: 1; /* Show the tooltip initially on hover */
+  transition: opacity 0.3s;
+}
+
+/* Hide the default browser tooltip */
+button.hide-tooltip {
+  pointer-events: none;
+}
+
+.warning {
+  color: #ff0000; /* Red text color */
+  font-weight: bold; /* Bold text */
+  border: 1px solid #ff0000; /* Red border */
+  padding: 8px; /* Padding around the content */
+  background-color: #ffe6e6; /* Light red background */
+  margin-bottom: 3px;
+  border-radius: 3px;
+}
+
+/* research field and Title/ DOI */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.custom-input.error {
+  border-color: red;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+
+.custom-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: .375rem .75rem;
+  font-size: 14px;
+  line-height: 1;
+  transition: border-color 0.15s ease-in-out;
+}
+
+body {
+  min-width: 400px; /* Set a minimum width for the body */
+  margin: 5;
+  padding: 1; 
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.table-cell {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.leftColumn {
+  background-color: #373434;
+  color: #fff;
+  width: 30%;
+}
+
+.rightColumn {
+  background-color: #fff;
+  width: 70%;
+}
+
+.full-width {
+  flex: 2; /* Span across both columns */
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-top: none;
+}
+
+.custom-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  margin-bottom: -15px; /* Adjust as needed */
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: #f2f2f2;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+  display: block;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding-top: 20px;
+  border-top: none;
+}
+.text-container {
+  margin: 0 10px;
+}
+
+/* dragger */
+.item-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px; /* Added padding for spacing */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.draggable-item {
+  margin: 5px;
+  min-width: 100px;
+  height: 100px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: rgb(252, 54, 54);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Ensure items are above arrow */
+}
+.predicate-circle {
+  margin: 5px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 20px; /* Adjusted position */
+  z-index: 1; /* Ensure items are above arrow */
+  left: 155px;
+}
+.arrow {
+  position: absolute;
+  width: 530px;
+  height: 1px;
+  background-color: black;
+  z-index: 0; /* Ensure arrow is below items */
+  left: 45px;
+}
+.arrow svg {
+  width: 10px;
+  height: 10px;
+  fill: black;
+  transform: translateY(-83%) translateX(5050%) rotate(150deg); /* Adjusted rotation */
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.spinner {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #db3434;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation: spin 2s linear infinite;
+}
+
+.spinner {
+  display:block;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #db3434;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

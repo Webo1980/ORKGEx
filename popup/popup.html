@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORKG Annotator</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <span class="header-text">
+    <span class="circle">1</span>
+    <span class="text">Select Properties</span>
+  </span>
+  <div class="tab-header">
+    <div id="properties-list" class="properties-list" style="display: none;"></div>
+    <input type="text" id="property-input" class="custom-input" placeholder="Type to filter ORKG properties">
+    <div id="properties">
+      <!-- Property selection buttons will be added here dynamically -->
+      <!-- Suggestions from OpenAI will be displayed here -->
+      </span>
+    </div>
+    <button id="generate-report" class="custom-button" disabled>
+      Review Annotation
+    </button>
+  </div>
+  <hr id="seperator">
+  <span class="header-text" id="annotation-header" style="display: none;">
+    <span class="circle">2</span>
+    <span class="text">Review Annotation</span>
+  </span>
+  <div id="report-container" class="container" style="display: none;">
+    <div class="tab">
+      <button class="tablinks" data-tab="text">Text</button>
+      <button class="tablinks" data-tab="images">Images</button>
+      <!-- <button class="tablinks" data-tab="tables">Tables</button> -->
+      <!-- Add more buttons for additional tabs as needed -->
+    </div>
+  
+    <!-- Text Tab Content -->
+    <div id="text-tab" class="tabcontent">
+      <!-- Your text content goes here -->
+      <a href="#" id="delete-all-link" style="color: red;">Delete All</a> <!-- Add the "Delete All" link -->
+      <table id="text-report" class="report-table">
+        <!-- Table rows will be added here dynamically -->
+      </table>
+      <br/>
+    </div>
+  
+    <!-- Images Tab Content -->
+    <div id="images-tab" class="tabcontent">
+      <!-- Your images content goes here -->
+      <table id="images-report" class="report-table">
+        <!-- Table rows will be added here dynamically -->
+      </table>
+      <br/>
+    </div>
+    <!-- Add more tab contents as needed -->
+</div>
+
+  <hr id="seperator">
+  <span class="header-text" id="metadata-header" style="display: none;">
+    <span class="circle">3</span>
+    <span class="text">Review Metadata</span>
+  </span>
+  <div id="metadata-container" class="container" style="display: none;">
+    <div id="wrong-doi" class="warning" style="display: none;">We could not detect the DOI automatically. Please add it manually</div>
+    <div class="table-row">
+      <div class="table-cell leftColumn">
+        <span>Research Field <span style="color: red;">*</span></span>
+      </div>
+      <div id="researchFieldDiv" class="table-cell rightColumn">
+      </div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell leftColumn">
+        <span>Title/DOI <span style="color: red;">*</span></span>
+      </div>
+      <div class="table-cell rightColumn">
+        <input type="text" id="metadata" class="custom-input" />
+        <input type="hidden" id="researchField" />
+        <i class="fas fa-question-circle" id="helpIcon" title="We detected the DOI automatically. Please review it and make sure it is correct"></i>
+      </div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell full-width" id="create-paper-div" colspan="2">
+        <button id="create-paper" class="custom-button" >Create a Paper</button>
+        <span style="font-size:17px; margin: 7px;" id="download-file"><i class="fas fa-download" title="Download JSON File"></i></span>
+      </div>
+    <div>
+  </div>  
+</body>
+<script src="popup.js"></script>
+</html>
