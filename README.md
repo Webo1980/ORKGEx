@@ -3,6 +3,11 @@
 ## Introduction
 
 This repository contains the code for a novel approach to enhance the semantic description and annotation of research articles. The approach includes tools for web-based annotation directly within browsers, seamlessly integrated with the [Open Research Knowledge Graph (ORKG)](https://orkg.org/). It also features methods for extracting knowledge from complex figure data, bridging textual and visual information in scholarly communication.
+## Demo Video
+
+[![Watch the demo](media/thumbnail.png)](https://drive.google.com/file/d/<FILE_ID>/view?usp=sharing)
+
+This short video demonstrates the ORKGEx Chrome extension in action — showcasing annotation, extraction, and integration with the ORKG platform.
 
 ## Installation and Usage
 
