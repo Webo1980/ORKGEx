@@ -25,6 +25,14 @@ To load and test the Chrome extension locally:
 
 5. The extension should now appear in the list of installed extensions. You can interact with it by clicking on "Details" and selecting "Extension options" or managing its behavior.
 
+## Implementations
+
+### Main Branch (Conference Paper)
+VLM-based figure annotation using the collaborative implementation as published in WEB 2025, including fine-tuned Vision Transformer classification and specialized models (UniChart, LLaVa-NeXT).
+
+### Thesis Branch (`thesis-openai-implementation`)
+Extended implementation using OpenAI GPT-4o for VLM-based figure annotation, developed as part of the doctoral thesis work. Features direct triple extraction from figures via prompt engineering and an interactive human-in-the-loop validation interface.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
